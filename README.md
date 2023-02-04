@@ -1,2 +1,2 @@
-# sol4k-demo
+# sol4k demo 
 A demo how to use sol4k
