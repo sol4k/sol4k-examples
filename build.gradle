@@ -5,11 +5,17 @@ plugins {
 group 'org.sol4kdemo'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = 11
+targetCompatibility = 11
+
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 dependencies {
+    implementation 'org.sol4k:sol4k:0.1.5'
+    implementation 'org.bitcoinj:bitcoinj-core:0.16.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
