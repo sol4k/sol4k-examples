@@ -1,6 +1,6 @@
 package org.sol4kdemo;
 
-import org.bitcoinj.core.Base58;
+import org.sol4k.Base58;
 import org.sol4k.Connection;
 import org.sol4k.Keypair;
 import org.sol4k.PublicKey;
@@ -13,7 +13,7 @@ public class Main {
         var connection = new Connection("https://api.devnet.solana.com");
         var latestBlockhash = connection.getLatestBlockhash();
         var sender = Keypair.fromSecretKey(Base58.decode("2WGcYYau2gLu2DUq68SxxXQmCgi77n8hFqqLNbNyg6Xfh2m3tvg8LF5Lgh69CFDux41LUKV1ak1ERHUqiBZnyshz"));
-         var receiver = new PublicKey("DxPv2QMA5cWR5Xfg7tXr5YtJ1EEStg5Kiag9HhkY1mSx");
+        var receiver = new PublicKey("DxPv2QMA5cWR5Xfg7tXr5YtJ1EEStg5Kiag9HhkY1mSx");
         var instruction = new TransferInstruction(sender.getPublicKey(), receiver, 1000);
         var transaction = new Transaction(
                 latestBlockhash.getBlockhash(),
