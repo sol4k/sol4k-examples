@@ -1,6 +1,8 @@
 # sol4k demo [![Build](https://github.com/sol4k/sol4k-demo/actions/workflows/build.yml/badge.svg)](https://github.com/sol4k/sol4k-demo/actions/workflows/build.yml)
 
-Sending transactions using sol4k in Java.
+Sending transactions using sol4k in Java. Create a connection,
+request the latest blockhash, and submit a SOL transfer
+transaction from one account to another.
 
 Imports:
 ```java
@@ -12,7 +14,8 @@ import org.sol4k.Transaction;
 import org.sol4k.TransferInstruction;
 ```
 
-Sending 1000 Lamport from one account to another: 
+Sending 1000 Lamport from one account to another:
+
 ```java
 var connection = new Connection("https://api.devnet.solana.com");
 var latestBlockhash = connection.getLatestBlockhash();
@@ -26,5 +29,5 @@ var transaction = new Transaction(
 );
 transaction.sign(sender);
 var signature = connection.sendTransaction(transaction);
-System.out.println("Signature " + signature);
+System.out.println("Transaxction Signature: " + signature);
 ```
