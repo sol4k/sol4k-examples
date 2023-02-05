@@ -22,6 +22,6 @@ public class Main {
         );
         transaction.sign(sender);
         var signature = connection.sendTransaction(transaction);
-        System.out.println("Signature " + signature);
+        System.out.println("Transaction Signature: " + signature);
     }
 }
