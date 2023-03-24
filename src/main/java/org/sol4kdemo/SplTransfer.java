@@ -10,7 +10,7 @@ import org.sol4k.instruction.SplTransferInstruction;
 public class SplTransfer {
     public static void main(String[] args) {
         var connection = new Connection("https://api.devnet.solana.com");
-        var blockhash = connection.getLatestBlockhash().getBlockhash();
+        var blockhash = connection.getLatestBlockhash();
         // fund this account in case it is empty
         var holder = Keypair.fromSecretKey(Base58.decode("2WGcYYau2gLu2DUq68SxxXQmCgi77n8hFqqLNbNyg6Xfh2m3tvg8LF5Lgh69CFDux41LUKV1ak1ERHUqiBZnyshz"));
         var usdc = new PublicKey("Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr");
