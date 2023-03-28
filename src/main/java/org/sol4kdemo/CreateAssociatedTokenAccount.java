@@ -4,12 +4,13 @@ import org.sol4k.Base58;
 import org.sol4k.Connection;
 import org.sol4k.Keypair;
 import org.sol4k.PublicKey;
+import org.sol4k.RpcUrl;
 import org.sol4k.Transaction;
 import org.sol4k.instruction.CreateAssociatedTokenAccountInstruction;
 
 public class CreateAssociatedTokenAccount {
     public static void main(String[] args) {
-        var connection = new Connection("https://api.devnet.solana.com");
+        var connection = new Connection(RpcUrl.DEVNET);
         var blockhash = connection.getLatestBlockhash();
         // fund this account in case it is empty
         var payerWallet = Keypair.fromSecretKey(Base58.decode("2WGcYYau2gLu2DUq68SxxXQmCgi77n8hFqqLNbNyg6Xfh2m3tvg8LF5Lgh69CFDux41LUKV1ak1ERHUqiBZnyshz"));
