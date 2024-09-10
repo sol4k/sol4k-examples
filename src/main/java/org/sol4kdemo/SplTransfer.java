@@ -4,7 +4,8 @@ import org.sol4k.Base58;
 import org.sol4k.Connection;
 import org.sol4k.Keypair;
 import org.sol4k.PublicKey;
-import org.sol4k.Transaction;
+import org.sol4k.TransactionMessage;
+import org.sol4k.VersionedTransaction;
 import org.sol4k.instruction.SplTransferInstruction;
 
 public class SplTransfer {
@@ -20,14 +21,17 @@ public class SplTransfer {
         var splTransferInstruction = new SplTransferInstruction(
                 holderAssociatedAccount.getPublicKey(),
                 receiverAssociatedAccount,
+                usdc,
                 holder.getPublicKey(),
-                100
+                100,
+                6
         );
-        var transaction = new Transaction(
+        var message = TransactionMessage.newMessage(
+                holder.getPublicKey(),
                 blockhash,
-                splTransferInstruction,
-                holder.getPublicKey()
+                splTransferInstruction
         );
+        var transaction = new VersionedTransaction(message);
         transaction.sign(holder);
 
         var signature = connection.sendTransaction(transaction);

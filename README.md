@@ -7,11 +7,13 @@ without any additional setup.
 ## Content
 
 1. [Sending a SOL transfer transaction](src/main/java/org/sol4kdemo/SolTransfer.java).
-2. [Creating an Associated Token Account](src/main/java/org/sol4kdemo/CreateAssociatedTokenAccount.java).
-3. [Transferring SPL tokens](src/main/java/org/sol4kdemo/SplTransfer.java).
-4. [Getting Wallet Balance](src/main/java/org/sol4kdemo/GetWalletBalance.java).
-5. [Getting SPL Token Balance](src/main/java/org/sol4kdemo/GetSplBalance.java).
-6. [Request Airdrop](src/main/java/org/sol4kdemo/RequestAirdrop.java).
+2. [Sending a SOL transfer transaction (Legacy Transaction)](src/main/java/org/sol4kdemo/SolTransferLegacyTransaction.java).
+3. [Sending a transaction with multiple instructions](src/main/java/org/sol4kdemo/TransactionWithMultipleInstructions.java).
+4. [Creating an Associated Token Account](src/main/java/org/sol4kdemo/CreateAssociatedTokenAccount.java).
+5. [Transferring SPL tokens](src/main/java/org/sol4kdemo/SplTransfer.java).
+6. [Getting Wallet Balance](src/main/java/org/sol4kdemo/GetWalletBalance.java).
+7. [Getting SPL Token Balance](src/main/java/org/sol4kdemo/GetSplBalance.java).
+8. [Request Airdrop](src/main/java/org/sol4kdemo/RequestAirdrop.java).
 
 ## How to import sol4k
 
