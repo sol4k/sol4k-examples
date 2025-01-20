@@ -17,7 +17,7 @@ dependencies {
     implementation 'org.sol4k:sol4k:0.5.5'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.4'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.4'
 }
 
 test {
