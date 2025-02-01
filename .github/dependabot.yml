@@ -17,3 +17,10 @@ updates:
     allow:
       - dependency-type: "all"
     target-branch: "main"
+    auto-merge: true
+    auto-merge-settings:
+      merge-strategy: "squash"
+      strict: true
+      delete-branch: true
+    versioning-strategy: "auto"
+    rebase-strategy: "auto"
