@@ -16,7 +16,3 @@ repositories {
 dependencies {
     implementation 'org.sol4k:sol4k:0.5.13'
 }
-
-test {
-    useJUnitPlatform()
-}
