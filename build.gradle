@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.sol4k:sol4k:0.5.11'
+    implementation 'org.sol4k:sol4k:0.5.13'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.12.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.12.1'
